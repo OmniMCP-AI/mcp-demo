@@ -40,7 +40,8 @@ If you are a developer or user and want to add your MCP project (or any MCP you 
 1. **Prepare your project repository** (on GitHub, Gitee, or any accessible code hosting platform).
 2. **Go to [https://omnimcp.ai](https://omnimcp.ai)** and submit the repository link through the platform's add-project interface.
 
-   ![image](https://github.com/user-attachments/assets/7e26e7e3-86e9-4006-b7bb-f5a9a712681e)
+   ![image](https://github.com/user-attachments/assets/9e524017-d9cd-4d95-a55c-fb373f67c891)
+
 
 ### Requirements
 1. **MCP Protocol Compliance:**
@@ -129,7 +130,7 @@ If you are a developer or user and want to add your MCP project (or any MCP you 
 
 Within a short time, your API will be available as an MCP server on the platform, ready for integration and use by AI agents and other clients.
 
-![image](https://github.com/user-attachments/assets/f92b4cd2-7320-4304-886e-2df0164c53d3)
+  ![image](https://github.com/user-attachments/assets/f92b4cd2-7320-4304-886e-2df0164c53d3)
 
 **These features make OmniMCP the most developer-friendly and AI-ready MCP platform available—empowering you to share, deploy, and transform your tools and APIs with unprecedented ease!**
 
