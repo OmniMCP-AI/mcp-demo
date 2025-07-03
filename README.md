@@ -138,3 +138,78 @@ If you are a developer or user and want to add your MCP project (or any MCP you 
    - It is recommended to provide a `Dockerfile` for easy deployment. If you do not provide one, the platform will automatically generate a Dockerfile for deployment.
 
 By following these guidelines, your MCP project can be easily integrated and showcased on the OmniMCP platform, making it accessible to a wider audience.
+
+---
+
+## Special Feature: Instantly Convert Any API to an MCP Server on OmniMCP
+
+The [OmniMCP platform](https://omnimcp.ai) offers a unique feature: you can instantly convert any API (that has an OpenAPI 3.0 specification) into an MCP server—no code changes required!
+
+### How to Use This Feature
+1. **Prepare an OpenAPI 3.0 Specification**
+   - If your API already has an OpenAPI 3.0 (Swagger) document, you can use it directly. If not, generate one for your API.
+   - Example OpenAPI 3.0 JSON:
+
+```json
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Simple API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "post": {
+        "summary": "Create a new user",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "required": ["name", "email"]
+      }
+    }
+  }
+}
+```
+
+2. **Submit the OpenAPI Document Link**
+   - Make your OpenAPI 3.0 document accessible via a public URL (e.g., GitHub raw link, web server, etc.).
+   - Go to [https://omnimcp.ai](https://omnimcp.ai), paste the link in the API-to-MCP submission form, and click submit.
+
+3. **Automatic Conversion and Enhancement**
+   - After submission, the OmniMCP platform will automatically convert your API into an MCP server.
+   - The platform will also analyze and enhance your API documentation (e.g., API descriptions, parameter descriptions) to optimize it for AI agent usage.
+
+Within a short time, your API will be available as an MCP server on the platform, ready for integration and use by AI agents and other clients.
