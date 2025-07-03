@@ -128,7 +128,8 @@ If you are a developer or user and want to add your MCP project (or any MCP you 
 ### Submission Process
 1. **Prepare your project repository** (on GitHub, Gitee, or any accessible code hosting platform).
 2. **Go to [https://omnimcp.ai](https://omnimcp.ai)** and submit the repository link through the platform's add-project interface.
-![image](https://github.com/user-attachments/assets/94508a12-7ce1-4143-af35-2b5ce8042be1)
+![image](https://github.com/user-attachments/assets/7e26e7e3-86e9-4006-b7bb-f5a9a712681e)
+
 
 ### Requirements
 1. **MCP Protocol Compliance:**
@@ -137,8 +138,11 @@ If you are a developer or user and want to add your MCP project (or any MCP you 
    - Your project must be able to start in `stdio` mode (support for `sse` and `streamable-http` is planned for the future).
 3. **Dockerfile (Optional but Recommended):**
    - It is recommended to provide a `Dockerfile` for easy deployment. If you do not provide one, the platform will automatically generate a Dockerfile for deployment.
-  
-![image](https://github.com/user-attachments/assets/2d1f28d6-528d-4898-b63f-92cd60746883)
+![image](https://github.com/user-attachments/assets/8bbf984a-7586-4c88-9103-3a14921364ec)
+
+
+![image](https://github.com/user-attachments/assets/f92b4cd2-7320-4304-886e-2df0164c53d3)
+
 
 
 By following these guidelines, your MCP project can be easily integrated and showcased on the OmniMCP platform, making it accessible to a wider audience.
