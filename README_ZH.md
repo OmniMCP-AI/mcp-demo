@@ -40,7 +40,8 @@ MCP 采用客户端-服务器架构，主要包括：
 1. **准备你的项目仓库**（GitHub、Gitee 或任何可访问的代码托管平台）。
 2. **访问 [https://omnimcp.ai](https://omnimcp.ai)**，通过平台的添加项目界面提交仓库链接。
 
-   ![image](https://github.com/user-attachments/assets/7e26e7e3-86e9-4006-b7bb-f5a9a712681e)
+   ![image](https://github.com/user-attachments/assets/823cb1bc-2bc5-429a-bd06-4c000e757f9c)
+
 
 ### 要求
 1. **MCP 协议兼容：**
@@ -129,7 +130,7 @@ MCP 采用客户端-服务器架构，主要包括：
 
 很快，你的 API 就会作为 MCP 服务器在平台上线，供 AI Agent 和其他客户端集成和使用。
 
-![image](https://github.com/user-attachments/assets/f92b4cd2-7320-4304-886e-2df0164c53d3)
+  ![image](https://github.com/user-attachments/assets/f92b4cd2-7320-4304-886e-2df0164c53d3)
 
 **这些特性让 OmniMCP 成为最适合开发者和 AI 场景的 MCP 平台，让你以前所未有的便捷方式分享、部署和转换工具与 API！**
 
