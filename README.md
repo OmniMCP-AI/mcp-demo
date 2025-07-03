@@ -128,6 +128,7 @@ If you are a developer or user and want to add your MCP project (or any MCP you 
 ### Submission Process
 1. **Prepare your project repository** (on GitHub, Gitee, or any accessible code hosting platform).
 2. **Go to [https://omnimcp.ai](https://omnimcp.ai)** and submit the repository link through the platform's add-project interface.
+![image](https://github.com/user-attachments/assets/94508a12-7ce1-4143-af35-2b5ce8042be1)
 
 ### Requirements
 1. **MCP Protocol Compliance:**
