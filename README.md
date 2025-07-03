@@ -1,3 +1,33 @@
+[🇨🇳 查看中文版 (中文文档)](README_ZH.md)
+
+## 🌐 What is MCP (Model Context Protocol)?
+
+MCP (Model Context Protocol) is an open protocol that standardizes how applications provide context to large language models (LLMs). Think of MCP as the "USB-C port" for AI applications, offering a unified way to connect models to various data sources and tools.
+
+### Why MCP?
+
+- A growing list of pre-built integrations that LLMs can directly plug into
+- Flexibility to switch between different LLM providers and vendors
+- Best practices for securing both local and remote data
+
+### General Architecture
+
+MCP follows a client-server architecture, including:
+
+- **MCP Hosts**: Programs like Claude Desktop, IDEs, or AI tools that want to access data through MCP
+- **MCP Clients**: Protocol clients that maintain 1:1 connections with servers
+- **MCP Servers**: Lightweight programs that expose specific capabilities through the standardized protocol
+- **Local Data Sources**: Your computer's files, databases, and services
+- **Remote Services**: External systems available over the internet (e.g., APIs)
+
+### Typical Use Cases
+
+- Building agents and AI workflows that integrate multiple data sources and tools
+- Allowing LLMs to securely access local or remote resources via a standard protocol
+- Rapidly integrating and switching between different LLMs and their capabilities
+
+For more details, see the [official MCP documentation](https://modelcontextprotocol.io/introduction).
+
 # 🚀 OmniMCP Platform: Unique Integration & API Conversion Features
 
 ## ⭐ Add Your MCP Project to the OmniMCP Platform (omnimcp.ai)
