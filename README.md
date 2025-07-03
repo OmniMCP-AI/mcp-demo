@@ -1,129 +1,6 @@
-# mcp-demo
-
-This project is a minimal [fastmcp](https://github.com/jlowin/fastmcp) demo, using Python 3.12 and [uv](https://github.com/astral-sh/uv) for dependency and process management. It provides a simple MCP service with an addition tool, and supports deployment via Docker.
-
-## 1. Project Overview
-
-- Built with fastmcp framework for MCP protocol support.
-- Provides a simple addition tool (`add`).
-- Uses `uv` for both dependency management and process running.
-- Exposes the service via HTTP (default: `0.0.0.0:8000/mcp`).
-
-## 2. Development Environment
-
-- Python 3.12
-- uv (for virtual environment, dependency, and process management)
-- fastmcp (installed as a dependency)
-
-### Install Dependencies (with Version Pinning)
-
-1. **Create a requirements.txt** (recommended for version control):
-
-   ```txt
-   fastmcp==2.10.1
-   # Add other dependencies here, one per line, with version numbers
-   ```
-
-2. **Create the virtual environment and install dependencies:**
-
-   ```bash
-   uv venv --python=3.12
-   uv pip install -r requirements.txt
-   ```
-
-3. **Activate the virtual environment:**
-
-   - On Unix/macOS:
-     ```bash
-     source .venv/bin/activate
-     ```
-   - On Windows:
-     ```cmd
-     .\.venv\Scripts\activate
-     ```
-
-   After activation, you can use `uv run server.py` or other commands in the virtual environment.
-
-## 3. How to Develop and Add New Tools
-
-1. Define your tool function in `server.py` using the `@mcp.tool()` decorator. For example:
-
-```python
-@mcp.tool()
-def add(a: int, b: int) -> int:
-    """Add two numbers"""
-    return a + b
-```
-
-2. Start the service, and the tool will be available via MCP clients.
-
-## 4. How to Start the Service
-
-Activate the virtual environment (see above) and run the server using uv:
-
-```bash
-uv run server.py
-```
-
-The service will be available at `http://0.0.0.0:8000/mcp` (by default, using SSE transport as per current `server.py`).
-
-## 5. Docker Deployment
-
-### Set Startup Mode in Dockerfile
-
-You can specify the startup mode (transport) directly in the Dockerfile by editing the `CMD` instruction. For example, to use stdio mode:
-
-```dockerfile
-CMD ["uv", "run", "server.py", "--transport", "stdio"]
-```
-
-To use SSE mode:
-
-```dockerfile
-CMD ["uv", "run", "server.py", "--transport", "sse"]
-```
-
-To use streamable-http mode:
-
-```dockerfile
-CMD ["uv", "run", "server.py", "--transport", "streamable-http"]
-```
-
-With this setup, you can start the container with a simple command:
-
-```bash
-docker run -d -p 8000:8000 --name mcp-demo mcp-demo:latest
-```
-
-No extra arguments are needed at runtime. To change the mode, just edit the Dockerfile and rebuild the image.
-
-### Build the Docker Image
-
-```bash
-docker build -t mcp-demo:latest .
-```
-
-### Run the Container
-
-```bash
-docker run -d -p 8000:8000 --name mcp-demo mcp-demo:latest
-```
-
-The service will be available at `http://0.0.0.0:8000/sse` inside the container.
-
-**Note:**
-- The Dockerfile installs `uv` and uses `uv run server.py` as the default command, ensuring consistency with local development.
-- If you add a `requirements.txt`, Docker will use it to install dependencies via `uv pip install -r requirements.txt`.
-
----
-
-To add more tools, simply extend `server.py` with new `@mcp.tool()` functions as needed.
-
----
-
 # 🚀 OmniMCP Platform: Unique Integration & API Conversion Features
 
-## ⭐ How to Add Your MCP Project to the OmniMCP Platform (omnimcp.ai)
+## ⭐ Add Your MCP Project to the OmniMCP Platform (omnimcp.ai)
 
 **OmniMCP is not just a deployment platform—it is a showcase and integration hub for the entire MCP ecosystem!**
 
@@ -225,3 +102,126 @@ Within a short time, your API will be available as an MCP server on the platform
 ![image](https://github.com/user-attachments/assets/f92b4cd2-7320-4304-886e-2df0164c53d3)
 
 **These features make OmniMCP the most developer-friendly and AI-ready MCP platform available—empowering you to share, deploy, and transform your tools and APIs with unprecedented ease!**
+
+---
+
+# mcp-demo
+
+This project is a minimal [fastmcp](https://github.com/jlowin/fastmcp) demo, using Python 3.12 and [uv](https://github.com/astral-sh/uv) for dependency and process management. It provides a simple MCP service with an addition tool, and supports deployment via Docker.
+
+## 1. Project Overview
+
+- Built with fastmcp framework for MCP protocol support.
+- Provides a simple addition tool (`add`).
+- Uses `uv` for both dependency management and process running.
+- Exposes the service via HTTP (default: `0.0.0.0:8000/mcp`).
+
+## 2. Development Environment
+
+- Python 3.12
+- uv (for virtual environment, dependency, and process management)
+- fastmcp (installed as a dependency)
+
+### Install Dependencies (with Version Pinning)
+
+1. **Create a requirements.txt** (recommended for version control):
+
+   ```txt
+   fastmcp==2.10.1
+   # Add other dependencies here, one per line, with version numbers
+   ```
+
+2. **Create the virtual environment and install dependencies:**
+
+   ```bash
+   uv venv --python=3.12
+   uv pip install -r requirements.txt
+   ```
+
+3. **Activate the virtual environment:**
+
+   - On Unix/macOS:
+     ```bash
+     source .venv/bin/activate
+     ```
+   - On Windows:
+     ```cmd
+     .\.venv\Scripts\activate
+     ```
+
+   After activation, you can use `uv run server.py` or other commands in the virtual environment.
+
+## 3. How to Develop and Add New Tools
+
+1. Define your tool function in `server.py` using the `@mcp.tool()` decorator. For example:
+
+```python
+@mcp.tool()
+def add(a: int, b: int) -> int:
+    """Add two numbers"""
+    return a + b
+```
+
+2. Start the service, and the tool will be available via MCP clients.
+
+## 4. How to Start the Service
+
+Activate the virtual environment (see above) and run the server using uv:
+
+```bash
+uv run server.py
+```
+
+The service will be available at `http://0.0.0.0:8000/sse` inside the container.
+
+**Note:**
+- The Dockerfile installs `uv` and uses `uv run server.py` as the default command, ensuring consistency with local development.
+- If you add a `requirements.txt`, Docker will use it to install dependencies via `uv pip install -r requirements.txt`.
+
+---
+
+To add more tools, simply extend `server.py` with new `@mcp.tool()` functions as needed.
+
+## 5. Docker Deployment
+
+### Set Startup Mode in Dockerfile
+
+You can specify the startup mode (transport) directly in the Dockerfile by editing the `CMD` instruction. For example, to use stdio mode:
+
+```dockerfile
+CMD ["uv", "run", "server.py", "--transport", "stdio"]
+```
+
+To use SSE mode:
+
+```dockerfile
+CMD ["uv", "run", "server.py", "--transport", "sse"]
+```
+
+To use streamable-http mode:
+
+```dockerfile
+CMD ["uv", "run", "server.py", "--transport", "streamable-http"]
+```
+
+With this setup, you can start the container with a simple command:
+
+```bash
+docker run -d -p 8000:8000 --name mcp-demo mcp-demo:latest
+```
+
+No extra arguments are needed at runtime. To change the mode, just edit the Dockerfile and rebuild the image.
+
+### Build the Docker Image
+
+```bash
+docker build -t mcp-demo:latest .
+```
+
+### Run the Container
+
+```bash
+docker run -d -p 8000:8000 --name mcp-demo mcp-demo:latest
+```
+
+The service will be available at `http://0.0.0.0:8000/sse` inside the container.
