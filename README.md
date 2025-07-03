@@ -121,15 +121,19 @@ To add more tools, simply extend `server.py` with new `@mcp.tool()` functions as
 
 ---
 
-## How to Add Your MCP Project to the OmniMCP Platform
+# 🚀 OmniMCP Platform: Unique Integration & API Conversion Features
+
+## ⭐ How to Add Your MCP Project to the OmniMCP Platform (omnimcp.ai)
+
+**OmniMCP is not just a deployment platform—it is a showcase and integration hub for the entire MCP ecosystem!**
 
 If you are a developer or user and want to add your MCP project (or any MCP you are interested in) to the [OmniMCP platform](https://omnimcp.ai), please follow these steps:
 
 ### Submission Process
 1. **Prepare your project repository** (on GitHub, Gitee, or any accessible code hosting platform).
 2. **Go to [https://omnimcp.ai](https://omnimcp.ai)** and submit the repository link through the platform's add-project interface.
-![image](https://github.com/user-attachments/assets/7e26e7e3-86e9-4006-b7bb-f5a9a712681e)
 
+   ![image](https://github.com/user-attachments/assets/7e26e7e3-86e9-4006-b7bb-f5a9a712681e)
 
 ### Requirements
 1. **MCP Protocol Compliance:**
@@ -138,20 +142,14 @@ If you are a developer or user and want to add your MCP project (or any MCP you 
    - Your project must be able to start in `stdio` mode (support for `sse` and `streamable-http` is planned for the future).
 3. **Dockerfile (Optional but Recommended):**
    - It is recommended to provide a `Dockerfile` for easy deployment. If you do not provide one, the platform will automatically generate a Dockerfile for deployment.
-![image](https://github.com/user-attachments/assets/8bbf984a-7586-4c88-9103-3a14921364ec)
 
-
-![image](https://github.com/user-attachments/assets/f92b4cd2-7320-4304-886e-2df0164c53d3)
-
-
-
-By following these guidelines, your MCP project can be easily integrated and showcased on the OmniMCP platform, making it accessible to a wider audience.
+**By following these guidelines, your MCP project can be easily integrated and showcased on the OmniMCP platform, making it accessible to a wider audience.**
 
 ---
 
-## Special Feature: Instantly Convert Any API to an MCP Server on OmniMCP
+## 🌟 [EXCLUSIVE] Instantly Convert Any API to an MCP Server on OmniMCP
 
-The [OmniMCP platform](https://omnimcp.ai) offers a unique feature: you can instantly convert any API (that has an OpenAPI 3.0 specification) into an MCP server—no code changes required!
+**OmniMCP offers a unique, industry-leading feature: Instantly convert any OpenAPI 3.0-compatible API into a fully functional MCP server—no code changes required!**
 
 ### How to Use This Feature
 1. **Prepare an OpenAPI 3.0 Specification**
@@ -216,8 +214,14 @@ The [OmniMCP platform](https://omnimcp.ai) offers a unique feature: you can inst
    - Make your OpenAPI 3.0 document accessible via a public URL (e.g., GitHub raw link, web server, etc.).
    - Go to [https://omnimcp.ai](https://omnimcp.ai), paste the link in the API-to-MCP submission form, and click submit.
 
+   ![image](https://github.com/user-attachments/assets/8bbf984a-7586-4c88-9103-3a14921364ec)
+
 3. **Automatic Conversion and Enhancement**
    - After submission, the OmniMCP platform will automatically convert your API into an MCP server.
    - The platform will also analyze and enhance your API documentation (e.g., API descriptions, parameter descriptions) to optimize it for AI agent usage.
 
 Within a short time, your API will be available as an MCP server on the platform, ready for integration and use by AI agents and other clients.
+
+![image](https://github.com/user-attachments/assets/f92b4cd2-7320-4304-886e-2df0164c53d3)
+
+**These features make OmniMCP the most developer-friendly and AI-ready MCP platform available—empowering you to share, deploy, and transform your tools and APIs with unprecedented ease!**
