@@ -137,5 +137,8 @@ If you are a developer or user and want to add your MCP project (or any MCP you 
    - Your project must be able to start in `stdio` mode (support for `sse` and `streamable-http` is planned for the future).
 3. **Dockerfile (Optional but Recommended):**
    - It is recommended to provide a `Dockerfile` for easy deployment. If you do not provide one, the platform will automatically generate a Dockerfile for deployment.
+  
+![image](https://github.com/user-attachments/assets/2d1f28d6-528d-4898-b63f-92cd60746883)
+
 
 By following these guidelines, your MCP project can be easily integrated and showcased on the OmniMCP platform, making it accessible to a wider audience.
