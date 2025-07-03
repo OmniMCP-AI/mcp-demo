@@ -17,21 +17,14 @@ This project is a minimal [fastmcp](https://github.com/jlowin/fastmcp) demo, usi
 
 ### Install Dependencies (with Version Pinning)
 
-1. **Create a requirements.txt** (recommended for version control):
-
-   ```txt
-   fastmcp==2.10.1
-   # Add other dependencies here, one per line, with version numbers
-   ```
-
-2. **Create the virtual environment and install dependencies:**
+1. **Create the virtual environment and install dependencies:**
 
    ```bash
    uv venv --python=3.12
    uv pip install -r requirements.txt
    ```
 
-3. **Activate the virtual environment:**
+2. **Activate the virtual environment:**
 
    - On Unix/macOS:
      ```bash
