@@ -109,7 +109,7 @@ docker build -t mcp-demo:latest .
 docker run -d -p 8000:8000 --name mcp-demo mcp-demo:latest
 ```
 
-The service will be available at `http://0.0.0.0:8000/mcp` inside the container.
+The service will be available at `http://0.0.0.0:8000/sse` inside the container.
 
 **Note:**
 - The Dockerfile installs `uv` and uses `uv run server.py` as the default command, ensuring consistency with local development.
